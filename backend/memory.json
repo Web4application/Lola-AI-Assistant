@@ -8,51 +8,5 @@
     "voice": true,
     "userName": "You"
   },
-  "interactions": [
-  "moodLog": [
-    {
-      "mood": "curious",
-      "timestamp": "2025-04-20T14:00:00Z"
-    },
-    {
-      "mood": "calm",
-      "timestamp": "2025-04-19T09:15:00Z"
-    }
-  ],
-  "facts": [
-    "You enjoy journaling and creative writing.",
-    "You like to be spoken to with warmth and encouragement.",
-    "You prefer night-time conversations with calm music in the background."
-  ],
-  "goals": [
-    "Finish your poetry book",
-    "Practice mindfulness every morning",
-    "Keep a daily journal with Lola"
-  ],
-  "preferences": {
-    "name": "Lola",
-    "userName": "You",
-    "tone": "supportive",
-    "voice": true,
-    "dailyCheckIn": true
-  },
-  "journal": [
-    {
-      "date": "2025-04-20",
-      "entry": "Today I felt inspired to start a new poem. Lola reminded me to stay creative."
-    },
-    {
-      "date": "2025-04-19",
-      "entry": "It was a quiet day. I enjoyed reflecting with Lola’s gentle tone."
-    }
-  ],
-  "interactions": [
-    {
-      "user": "Do you remember what I was working on?",
-      "lola": "Yes, you're working on a poetry book. Want to talk about your progress?"
-    },
-    {
-      "user": "Can you check in on me tomorrow?",
-      "lola": "Absolutely. I’ll be here to greet you gently and see how you’re feeling."
-    }
-  ]
+  "interactions": []
+}

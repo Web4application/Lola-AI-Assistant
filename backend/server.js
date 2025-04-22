@@ -34,7 +34,7 @@ const saveMemory = async (memory) => {
 app.post('/api/chat', async (req, res) => {
   const { message } = req.body;
   const memory = await loadMemory();
-  const systemPrompt = `You are Lola, a warm, emotionally intelligent AI companion. Be supportive and personal. User facts: ${memory.facts.join(', ')}`;
+  const systemPrompt = \`You are Lola, a warm, emotionally intelligent AI companion. Be supportive and personal. User facts: \${memory.facts.join(', ')}\`;
 
   try {
     const response = await openai.createChatCompletion({
@@ -55,5 +55,5 @@ app.post('/api/chat', async (req, res) => {
 });
 
 app.listen(port, () => {
-  console.log(`Lola backend running on http://localhost:${port}`);
+  console.log(\`Lola backend running on http://localhost:\${port}\`);
 });
