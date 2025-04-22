@@ -1,6 +1,7 @@
-flask
 openai
+elevenlabs
+flask
+flask-cors
 whisper
 sounddevice
 scipy
-elevenlabs
