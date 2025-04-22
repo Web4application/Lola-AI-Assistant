@@ -1,4 +1,3 @@
-
 const express = require('express');
 const cors = require('cors');
 const bodyParser = require('body-parser');
@@ -62,4 +61,35 @@ app.post('/api/mood', async (req, res) => {
 
 app.listen(port, () => {
   console.log(`Lola backend running at http://localhost:${port}`);
+});
+
+app.post('/api/chat', async (req, res) => {
+  const { message } = req.body;
+
+  const memory = await loadMemory();
+  const recentMoods = memory.moodLog?.slice(-3) || [];
+  const moodSummary = recentMoods
+    .map(entry => `- ${entry.mood} at ${new Date(entry.timestamp).toLocaleString()}`)
+    .join('\n');
+
+  const systemPrompt = `You are Lola, a warm and emotionally intelligent AI companion. 
+Here is recent mood history of the user:
+${moodSummary || "No mood data available yet."}
+Use this context to be supportive, reflective, and personal.`;
+
+  try {
+    const response = await openai.createChatCompletion({
+      model: 'gpt-4',
+      messages: [
+        { role: 'system', content: systemPrompt },
+        { role: 'user', content: message }
+      ]
+    });
+
+    const reply = response.data.choices[0].message.content;
+    res.json({ reply });
+  } catch (err) {
+    console.error(err);
+    res.status(500).send('Chat error');
+  }
 });
