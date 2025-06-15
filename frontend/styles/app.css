@@ -1,0 +1,47 @@
+
+body {
+  margin: 0;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background: #f7f7f7;
+  color: #333;
+}
+.app-container {
+  padding: 20px;
+  max-width: 600px;
+  margin: auto;
+}
+.chat-box {
+  background: white;
+  padding: 15px;
+  border-radius: 8px;
+  margin-bottom: 20px;
+}
+.messages {
+  max-height: 300px;
+  overflow-y: auto;
+  margin-bottom: 10px;
+}
+.message {
+  padding: 8px;
+  margin-bottom: 5px;
+  border-radius: 4px;
+}
+.message.user {
+  background: #e0f7fa;
+  align-self: flex-end;
+}
+.message.lola {
+  background: #fce4ec;
+}
+.input-row {
+  display: flex;
+  gap: 10px;
+}
+.input-row input {
+  flex: 1;
+  padding: 8px;
+}
+.mood-tracker input {
+  padding: 8px;
+  margin-right: 10px;
+}
