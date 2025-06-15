@@ -1,1 +1,0 @@
-# Mood journaling route
